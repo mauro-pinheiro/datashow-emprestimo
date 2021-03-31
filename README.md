@@ -1,8 +1,8 @@
-# Sistema de Emprestimo de Datashows - CAE - IFMA
+# Sistema de Empréstimo de Datashows - CAE - IFMA
 Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de datashow
 
 # Requisitos do Sistema
-## O Sistema deverá conter
+## O Sistema deverá conter:
 
 - A base de dados deve criptografar a senha do usuário.
 - A interface deve ser web/mobile.
@@ -44,7 +44,7 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 - O sitema deve monitoriar os equipamento emprestado.
 - O sistema deve notificar por email os professores que estão com devolução atrazada.
 
-# Entidades do sistema
+# Entidades do Sistema
 - User
 - Role
 - Permission
