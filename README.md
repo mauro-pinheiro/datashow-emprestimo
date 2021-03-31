@@ -52,3 +52,13 @@ Sistema para auxiliar o cae no processo de emprestimo e devolução de datashow
 - Aluno
 - Equipamento
 - Emprestimo (relacionamento entre professor e equipamento)
+
+# Ferramentas de Desenvolvimento
+- Framework: [Laravel 8](https://laravel.com/docs/8.x)
+- Bibliotecas
+  - [Jetsteam](https://jetstream.laravel.com/2.x/introduction.html)
+  - [Livewire](https://laravel-livewire.com/)
+  - [Sail](https://laravel.com/docs/8.x/sail)
+- Template: [AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE)
+- Containerização: [Docker](https://www.docker.com/)
+- Banco de Dados: [mysql](https://www.mysql.com/)
