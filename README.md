@@ -60,6 +60,10 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
   - [Livewire](https://laravel-livewire.com/)
   - [Laravel Sail](https://laravel.com/docs/8.x/sail)
   - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
+- Bibliotecas Dev
+  - [nascent-africa/jetstrap](https://github.com/nascent-africa/jetstrap)
+  - [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
+  - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 - Template: [AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE)
 - Containerização: [Docker](https://www.docker.com/)
 - Banco de Dados: [mysql](https://www.mysql.com/)
