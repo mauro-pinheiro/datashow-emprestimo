@@ -1,5 +1,5 @@
 # Sistema de Emprestimo de Datashows - CAE - IFMA
-Sistema para auxiliar o cae no processo de emprestimo e devolução de datashow
+Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de datashow
 
 # Requisitos do Sistema
 ## O Sistema deverá conter
