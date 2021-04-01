@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Push to dokku
-        uses: dokku/github-action@v1
+        uses: dokku/github-action@v1.0.1
         with:
           git_remote_url: 'ssh://root@cae-datashow.mcitsol.dev'
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
