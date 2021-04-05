@@ -2,29 +2,29 @@
 
 namespace App\Http\Forms;
 
-use Grafite\Forms\Fields\HasOne;
 use Grafite\Forms\Fields\HasMany;
 use Grafite\Forms\Fields\Text;
 use Grafite\Forms\Forms\ModelForm;
+use Grafite\Forms\Html\Button;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
-class RoleForm extends ModelForm
+class PermissionForm extends ModelForm
 {
     public $withLivewire = true;
+
     public $columns = 2;
 
-    public $model = Role::class;
+    public $model = Permission::class;
 
-    public $routePrefix = 'roles';
+    public $routePrefix = 'permissions';
 
-    public $with = ['permissions'];
-
-    public $paginate = 10;
+    public $with = ['roles'];
 
     public $buttons = [
         'submit' => 'Salvar',
     ];
+
 
     /**
      * Set the desired fields for the form
@@ -39,15 +39,15 @@ class RoleForm extends ModelForm
                 'label' => 'Nome'
             ]),
 
-            HasMany::make('permissions', [
+            HasMany::make('roles', [
                 'visible' => false,
-                'label' => 'Permissoes',
-                'model' => Permission::class,
+                'label' => 'Roles',
+                'model' => Role::class,
                 'model_options' => [
                     'label' => 'name',
                     'value' => 'id',
                 ]
-            ])
+            ]),
         ];
     }
 }

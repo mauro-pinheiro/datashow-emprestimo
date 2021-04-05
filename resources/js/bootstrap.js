@@ -12,6 +12,7 @@ try {
 
     require('overlayscrollbars');
     require('select2');
+    window.Swal = require('sweetalert2')
     require('../../vendor/almasaeed2010/adminlte/dist/js/adminlte');
 
     require('bootstrap');

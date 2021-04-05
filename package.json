@@ -32,6 +32,7 @@
     },
     "dependencies": {
         "icheck-bootstrap": "^3.0.1",
-        "select2": "^4.0.13"
+        "select2": "^4.0.13",
+        "sweetalert2": "^10.15.7"
     }
 }
