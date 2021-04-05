@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('roles', RoleIndex::class)->name('roles.form');
+Route::get('roles', RoleIndex::class)->name('roles.index');
 Route::get('roles/create', RoleSave::class)->name('roles.create');
 Route::get('roles/edit/{role}', RoleSave::class)->name('roles.edit');
 Route::get('permissions', PermissionIndex::class)->name('permissions.index');
