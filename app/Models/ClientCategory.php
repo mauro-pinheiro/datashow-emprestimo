@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class ClientCategory extends Model
 {
     use HasFactory;
+
+    protected $guard = [];
+
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 }

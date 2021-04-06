@@ -13,5 +13,11 @@ class Client extends Model
 
     protected $guard = [];
 
-    public
+    public function category(){
+        return $this->hasOne(ClientCategory::class);
+    }
+
+    public function loan(){
+        return $this->hasMany(Loan::class);
+    }
 }

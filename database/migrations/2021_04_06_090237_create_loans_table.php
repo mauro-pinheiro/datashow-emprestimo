@@ -20,12 +20,6 @@ class CreateLoansTable extends Migration
             $table->foreignId('equipament_id');
             $table->timestamp('due_date');
             $table->timestamp('return_date')->nullable();
-            $table->string('status')->virtualAs("
-                CASE
-                    WHEN return_data IS NOT NULL THEN 'Devolvido'
-                    WHEN NOW() > due_date THEN 'Atrasado'
-                    ELSE 'Emprestado'
-                ");
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ClientCategory;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -21,5 +22,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin@1234')
         ])->assignRole(Role::create(['name' => 'Super Admin']));
+
+        ClientCategory::create(['name' => 'Professor']);
+        ClientCategory::create(['name' => 'Aluno']);
     }
 }

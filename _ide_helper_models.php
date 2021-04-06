@@ -31,6 +31,9 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \App\Models\ClientCategory|null $category
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Loan[] $loan
+ * @property-read int|null $loan_count
  * @method static \Illuminate\Database\Eloquent\Builder|Client newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Client newQuery()
  * @method static \Illuminate\Database\Query\Builder|Client onlyTrashed()
@@ -70,23 +73,23 @@ namespace App\Models{
 
 namespace App\Models{
 /**
- * App\Models\Equipaments
+ * App\Models\Equipament
  *
  * @property int $id
  * @property string $name
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $deleted_at
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments query()
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Equipaments whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Equipament whereUpdatedAt($value)
  */
-	class Equipaments extends \Eloquent {}
+	class Equipament extends \Eloquent {}
 }
 
 namespace App\Models{
