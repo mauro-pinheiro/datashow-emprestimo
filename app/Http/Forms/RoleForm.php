@@ -2,12 +2,12 @@
 
 namespace App\Http\Forms;
 
+use App\Models\Role;
 use Grafite\Forms\Fields\HasOne;
 use Grafite\Forms\Fields\HasMany;
 use Grafite\Forms\Fields\Text;
 use Grafite\Forms\Forms\ModelForm;
 use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
 
 class RoleForm extends ModelForm
 {

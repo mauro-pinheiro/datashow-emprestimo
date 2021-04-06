@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin@1234')
-        ])->assignRole(Role::create(['name' => 'Super Admin']));
+        ])->assignRole(Role::create(['name' => config('super.super-admin')]));
         Permission::create(['name' => 'pode-acessar-area-admin']);
 
         ClientCategory::create(['name' => 'Professor']);

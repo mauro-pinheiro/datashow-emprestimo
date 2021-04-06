@@ -46,6 +46,12 @@ class AppServiceProvider extends ServiceProvider
                 'can' => 'pode-acessar-area-admin'
             ]);
             $event->menu->add([
+                'text'        => 'Usuario',
+                'icon'        => 'fa fa-user',
+                'route' => 'users.index',
+                'can' => 'pode-acessar-area-admin'
+            ]);
+            $event->menu->add([
                 'text'        => 'Role',
                 'icon'        => 'fa fa-user-tag',
                 'route' => 'roles.index',
@@ -57,6 +63,9 @@ class AppServiceProvider extends ServiceProvider
                 'route' => 'permissions.index',
                 'can' => 'pode-acessar-area-admin'
             ]);
+
+
+            $event->menu->add('GERENCIAMENTO');
             $event->menu->add([
                 'text'        => 'Cliente',
                 'icon'        => 'fa fa-user-tag',

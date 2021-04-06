@@ -64,4 +64,8 @@ class User extends Authenticatable
     public function loan(){
         return $this->hasMany(Loan::class);
     }
+
+    public function isSuper(){
+        return $this->hasRole(config('super.super-admin'));
+    }
 }

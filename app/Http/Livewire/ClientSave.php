@@ -10,6 +10,7 @@ use Livewire\Component;
 
 class ClientSave extends Component
 {
+    public $client;
     public $data;
     public $role;
     public $header = "Clietes";
@@ -22,18 +23,23 @@ class ClientSave extends Component
 
     public function mount(Client $client)
     {
-        $this->data = $client;
+        $this->client = $client;
+        $this->data['id'] = $client->id;
+        $this->data['name'] = $client->name;
+        $this->data['category'] = $client->client_category_id;
     }
 
     public function submit()
     {
         $this->validate();
         try {
-            $category = ClientCategory::find($this->data->category);
-            $client = Client::make($this->data->toArray());
-            $client->id = $this->data->id;
-            $client->category()->associate($category);
-            $client->save();
+            if($this->client){
+                $this->client->fill($this->data);
+                $this->client->category()->associate(ClientCategory::find($this->data['category']));
+                $this->client->save();
+            } else {
+                Client::create($this->data);
+            }
             $this->dispatchBrowserEvent('swal', ['title' => 'Salvo Com Sucesso!']);
         } catch (\Exception $e) {
             dd($e);
@@ -42,11 +48,10 @@ class ClientSave extends Component
 
     public function render()
     {
-        if ($this->data) {
-            dd($this->data);
+        if ($this->client) {
             $form = app(ClientForm::class)
                 ->setErrorBag($this->getErrorBag())
-                ->edit($this->data);
+                ->edit($this->client);
         } else {
             $form = app(ClientForm::class)
                 ->setErrorBag($this->getErrorBag())

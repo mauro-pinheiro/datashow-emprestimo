@@ -3,8 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Http\Forms\RoleForm;
+use App\Models\Role;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
-use Spatie\Permission\Models\Role;
 
 class RoleIndex extends Component
 {
@@ -12,9 +13,9 @@ class RoleIndex extends Component
 
     public function render()
     {
-        $query = null;
+        $query = Role::query();
         if(!empty(request()->search)){
-            $query = Role::where('name', 'like' , '%'.request('search').'%');
+            $query = $query->where('name', 'like' , '%'.request('search').'%');
         }
         $search = app(RoleForm::class)->search(null);
         $form = app(RoleForm::class)->index($query);

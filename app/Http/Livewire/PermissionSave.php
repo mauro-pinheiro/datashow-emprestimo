@@ -31,7 +31,7 @@ class PermissionSave extends Component
     {
         $this->validate();
         try {
-            Permission::updateOrCreate(['name' => $this->data['name']], ['name' => $this->data['name']])->roles()->sync($this->data['roles[]'] ?? []);
+            $permission = Permission::updateOrCreate(['name' => $this->data['name']], ['name' => $this->data['name']])->syncRoles($this->data['roles[]']);
             $this->dispatchBrowserEvent('swal', ['title' => 'Salvo Com Sucesso!']);
         } catch (\Exception $e) {
             dd($e);

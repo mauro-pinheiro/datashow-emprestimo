@@ -31,7 +31,7 @@ class RoleSave extends Component
     {
         $this->validate();
         try {
-            Role::updateOrCreate(['name' => $this->data['name']], ['name' => $this->data['name']])->permissions()->sync($this->data['permissions[]'] ?? []);
+            Role::updateOrCreate(['name' => $this->data['name']], ['name' => $this->data['name']])->syncPermissions($this->data['permissions[]']);
             $this->dispatchBrowserEvent('swal', ['title' => 'Salvo Com Sucesso!']);
         } catch (\Exception $e) {
             dd($e);
