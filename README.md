@@ -51,7 +51,7 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 - Professor
 - Aluno
 - Equipamento
-- Emprestimo (relacionamento entre professor e equipamento)
+- Emprestimo
 
 # Diagrama de Classes
 ![Diagrama de Classes](./Docs/diagrama-classe.svg)
