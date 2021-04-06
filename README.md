@@ -60,6 +60,8 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
   - [Livewire](https://laravel-livewire.com/)
   - [Laravel Sail](https://laravel.com/docs/8.x/sail)
   - [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
+  - [Tucker-Eric/EloquentFilter](https://github.com/Tucker-Eric/EloquentFilter)
+  - [GrafiteInc/Forms](https://github.com/GrafiteInc/Forms)
 - Bibliotecas Dev
   - [nascent-africa/jetstrap](https://github.com/nascent-africa/jetstrap)
   - [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
