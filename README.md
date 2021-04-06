@@ -53,6 +53,9 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 - Equipamento
 - Emprestimo (relacionamento entre professor e equipamento)
 
+# Diagrama de Classes
+![Diagrama de Classes](./Docs/diagrama-classe.svg)
+
 # Ferramentas de Desenvolvimento
 - Framework: [Laravel 8](https://laravel.com/docs/8.x)
 - Bibliotecas
