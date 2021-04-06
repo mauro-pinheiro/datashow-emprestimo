@@ -9,9 +9,11 @@ class ClientCategory extends Model
 {
     use HasFactory;
 
-    protected $guard = [];
+    protected $fillable = [
+        'name'
+    ];
 
     public function client(){
-        return $this->belongsTo(Client::class);
+        return $this->hasMany(Client::class);
     }
 }

@@ -9,7 +9,7 @@ class Equipament extends Model
 {
     use HasFactory;
 
-    protected $guard = [];
+    protected $guarded = [];
 
     public function loan(){
         return $this->hasMany(Loan::class);

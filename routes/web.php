@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\ClientIndex;
+use App\Http\Livewire\ClientSave;
 use App\Http\Livewire\PermissionCreateForm;
 use App\Http\Livewire\PermissionIndex;
 use App\Http\Livewire\PermissionSave;
@@ -22,13 +24,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
-    return view('home');
-})->name('home');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+//     return view('home');
+// })->name('home');
 
-Route::get('roles', RoleIndex::class)->name('roles.index');
-Route::get('roles/create', RoleSave::class)->name('roles.create');
-Route::get('roles/edit/{role}', RoleSave::class)->name('roles.edit');
-Route::get('permissions', PermissionIndex::class)->name('permissions.index');
-Route::get('permissions/create', PermissionSave::class)->name('permissions.create');
-Route::get('permissions/edit/{permission}', PermissionSave::class)->name('permissions.edit');
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::view('/home', 'home')->name('home');
+    Route::get('roles', RoleIndex::class)->name('roles.index');
+    Route::get('roles/create', RoleSave::class)->name('roles.create');
+    Route::get('roles/edit/{role}', RoleSave::class)->name('roles.edit');
+    Route::get('permissions', PermissionIndex::class)->name('permissions.index');
+    Route::get('permissions/create', PermissionSave::class)->name('permissions.create');
+    Route::get('permissions/edit/{permission}', PermissionSave::class)->name('permissions.edit');
+    Route::get('clientes', ClientIndex::class)->name('clients.index');
+    Route::get('clientes/create', ClientSave::class)->name('clients.create');
+    Route::get('clientes/edit/{client}', ClientSave::class)->name('clients.edit');
+});
+

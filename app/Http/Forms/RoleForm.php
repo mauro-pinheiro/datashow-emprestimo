@@ -40,7 +40,6 @@ class RoleForm extends ModelForm
             ]),
 
             HasMany::make('permissions', [
-                'visible' => false,
                 'label' => 'Permissoes',
                 'model' => Permission::class,
                 'model_options' => [

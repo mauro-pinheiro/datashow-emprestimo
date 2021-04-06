@@ -11,10 +11,12 @@ class Client extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $guard = [];
+    protected $fillable = [
+        'name'
+    ];
 
     public function category(){
-        return $this->hasOne(ClientCategory::class);
+        return $this->belongsTo(ClientCategory::class, 'client_category_id');
     }
 
     public function loan(){

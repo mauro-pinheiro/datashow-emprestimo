@@ -25,5 +25,8 @@
     $('select').change(function(){
         @this.set(`data.${$(this).attr('name')}`, $(this).val())
     })
+    $(document).ready(function(){
+        $('select').trigger('change');
+    })
 </script>
 @stop

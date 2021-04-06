@@ -49,13 +49,19 @@ class AppServiceProvider extends ServiceProvider
                 'text'        => 'Role',
                 'icon'        => 'fa fa-user-tag',
                 'route' => 'roles.index',
-                'can' => 'pode-acessar-roles'
+                'can' => 'pode-acessar-area-admin'
             ]);
             $event->menu->add([
                 'text'        => 'Permissions',
                 'icon'        => 'fa fa-user-tag',
                 'route' => 'permissions.index',
-                'can' => 'pode-acessar-permissions'
+                'can' => 'pode-acessar-area-admin'
+            ]);
+            $event->menu->add([
+                'text'        => 'Cliente',
+                'icon'        => 'fa fa-user-tag',
+                'route' => 'clients.index',
+                'can' => 'pode-acessar-area-cliente'
             ]);
         });
     }
