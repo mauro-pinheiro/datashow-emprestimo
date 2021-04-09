@@ -53,6 +53,13 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 - Equipamento
 - Emprestimo
 
+# Passos CRUD de Entidades
+```
+php artisan make:model-form {model}
+php artisan make:livewire {ModelIndex}
+php artisan make:livewire {ModelSave}
+```
+
 # Diagrama de Classes
 ![Diagrama de Classes](./Docs/diagrama-classe.svg)
 
