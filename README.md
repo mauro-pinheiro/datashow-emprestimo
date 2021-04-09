@@ -30,6 +30,11 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 
 
 # Processos
+## Descricao do Processo de Reserva
+- O professor se dirige ao CAE e solicita um equipamento para determinada data.
+- O funcionario do CAE escolhe um equipamento e marca ele como emprestado informando o para quem foi resevado (professor cadastrado).
+- O sistema emite um comprovate de reseva.
+
 ## Descricao do Processo de Emprestimo
 - O professor se dirige ao CAE e solicita um equipamento.
 - O funcionario do CAE escolhe um equipamento e marca ele como emprestado informando o para quem foi emprestado (professor cadastrado).
@@ -39,6 +44,7 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 ## Descricao do Processo de Devolução
 - O professor se dirige ao CAE portando o equipamento que deseja devolver e o entraga a um funcionario.
 - O funcionario recebe o equipamento, verifica o identificador e atualiza o status do equipamento no sistema para devolvido.
+- O sistema emite um comprovate de devolucao (talvez).
 
 ## Descricao do Processo de Monitoramento de Emprestimo
 - O sitema deve monitoriar os equipamento emprestado.
