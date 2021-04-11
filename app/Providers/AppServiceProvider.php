@@ -70,7 +70,13 @@ class AppServiceProvider extends ServiceProvider
                 'text'        => 'Cliente',
                 'icon'        => 'fa fa-user-tag',
                 'route' => 'clients.index',
-                'can' => 'pode-acessar-area-cliente'
+                'can' => 'pode-acessar-area-gerenciamento'
+            ]);
+            $event->menu->add([
+                'text'        => 'Equipamento',
+                'icon'        => 'fa fa-user-tag',
+                'route' => 'equipaments.index',
+                'can' => 'pode-acessar-area-gerenciamento'
             ]);
         });
     }
