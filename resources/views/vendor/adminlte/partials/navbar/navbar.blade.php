@@ -21,7 +21,7 @@
 
         {{-- Configured right links --}}
         @each('adminlte::partials.navbar.menu-item', $adminlte->menu('navbar-right'), 'item')
-
+        <a href="#"><img src="{{asset('image/libras-icone.png')}}" alt='vlibras-incon' height="35px" width="35px"></a>
         {{-- User menu link --}}
         @if(Auth::user())
             @if(config('adminlte.usermenu_enabled'))
