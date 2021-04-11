@@ -23,10 +23,13 @@ class ClientSave extends Component
 
     public function mount(Client $client)
     {
-        $this->client = $client;
-        $this->data['id'] = $client->id;
-        $this->data['name'] = $client->name;
-        $this->data['category'] = $client->client_category_id;
+        if(empty($client->id)){
+            $this->client = null;
+            $this->data = [];
+        } else {
+            $this->client = $client;
+            $this->data = $client->toArray();
+        }
     }
 
     public function submit()
@@ -38,7 +41,9 @@ class ClientSave extends Component
                 $this->client->category()->associate(ClientCategory::find($this->data['category']));
                 $this->client->save();
             } else {
-                Client::create($this->data);
+                $this->client = Client::make($this->data);
+                $this->client->category()->associate(ClientCategory::find($this->data['category']));
+                $this->client->save();
             }
             $this->dispatchBrowserEvent('swal', ['title' => 'Salvo Com Sucesso!']);
         } catch (\Exception $e) {
@@ -48,6 +53,7 @@ class ClientSave extends Component
 
     public function render()
     {
+        // dD($this->client);
         if ($this->client) {
             $form = app(ClientForm::class)
                 ->setErrorBag($this->getErrorBag())

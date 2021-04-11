@@ -4,6 +4,7 @@ namespace App\Http\Forms;
 
 use App\Models\Client;
 use App\Models\ClientCategory;
+use Grafite\Forms\Fields\Email;
 use Grafite\Forms\Fields\HasOne;
 use Grafite\Forms\Fields\Hidden;
 use Grafite\Forms\Fields\Text;
@@ -57,6 +58,16 @@ class ClientForm extends ModelForm
         return [
             Hidden::make('id', [
                 'visible' => false,
+            ]),
+
+            Text::make('matricula',[
+                'required' => true,
+                'label' => 'Matricula',
+            ]),
+
+            Email::make('email',[
+                'required' => true,
+                'label' => 'Email',
             ]),
 
             Text::make('name',[

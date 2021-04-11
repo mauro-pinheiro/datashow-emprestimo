@@ -22,7 +22,7 @@ class CreateLoansTable extends Migration
             $table->timestamp('load_date')->nullable();         //Data de retirada do equipamento
             $table->timestamp('due_date')->nullable();          //Data de que o equipamento deve ser devolvido
             $table->timestamp('return_date')->nullable();       //Data que o equipamento foi devolvido
-            $table->string('status');
+            $table->string('status')->default('EMPRESTADO');                           //Reservado, Emprestado,
             $table->timestamps();
         });
     }

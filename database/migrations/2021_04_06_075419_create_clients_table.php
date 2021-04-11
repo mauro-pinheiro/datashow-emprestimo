@@ -15,7 +15,9 @@ class CreateClientsTable extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
+            $table->string('matricula');
             $table->string('name');
+            $table->string('email')->unique();
             $table->foreignId('client_category_id');
             $table->timestamps();
             $table->softDeletes();

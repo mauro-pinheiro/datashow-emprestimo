@@ -12,7 +12,9 @@ class Client extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'name'
+        'matricula',
+        'name',
+        'email',
     ];
 
     public function category(){

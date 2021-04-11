@@ -9,6 +9,7 @@ use App\Models\User;
 use Grafite\Forms\Fields\Date;
 use Grafite\Forms\Fields\HasOne;
 use Grafite\Forms\Fields\Hidden;
+use Grafite\Forms\Fields\Text;
 use Grafite\Forms\Forms\ModelForm;
 
 class LoanForm extends ModelForm
@@ -46,7 +47,7 @@ class LoanForm extends ModelForm
         'submit' => 'Save'
     ];
 
-    public $with = ['equipament', 'client', 'funcionario'];
+    public $with = ['equipament', 'client', 'user'];
 
     /**
      * Set the desired fields for the form
@@ -84,6 +85,7 @@ class LoanForm extends ModelForm
                     'label' => 'name',
                 ]
             ]),
+
             Date::make('reservation_date', [
                 'label' => 'Data de Reserva',
             ]),
@@ -95,6 +97,10 @@ class LoanForm extends ModelForm
             ]),
             Date::make('return_date', [
                 'label' => 'Data de Retorno'
+            ]),
+
+            Text::make('status', [
+                'label' => 'Status'
             ]),
         ];
     }
