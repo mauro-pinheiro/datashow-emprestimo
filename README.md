@@ -4,6 +4,7 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 # Requisitos do Sistema
 ## O Sistema deverá conter:
 
+- O sistema deve enviar um email para novos usuários cadastrados para que cadastre uma senha.
 - A base de dados deve criptografar a senha do usuário.
 - A interface deve ser web/mobile.
 - Os funcionários do CAE irão cadastrar, editar, remover equipamentos.
@@ -15,6 +16,7 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 - O sistema deve visualizar os emprestimos realizados com datas de devoluções virgentes e vencidas.
 - O sistema deve possibilitar alocar um equipamento a um professor cadastrado.
 - Comprovante solicitação de reserva (por e-mail).
+- O sistema não deve permir emprestimo de mais de um equipamento ao mesmo cliente.
 - Emissão de relatório.
 
 # Roles e Permissions
