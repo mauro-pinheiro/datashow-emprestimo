@@ -78,6 +78,12 @@ class AppServiceProvider extends ServiceProvider
                 'route' => 'equipaments.index',
                 'can' => 'pode-acessar-area-gerenciamento'
             ]);
+            $event->menu->add([
+                'text'        => 'Emprestimo',
+                'icon'        => 'fa fa-user-tag',
+                'route' => 'loans.index',
+                'can' => 'pode-acessar-area-gerenciamento'
+            ]);
         });
     }
 }

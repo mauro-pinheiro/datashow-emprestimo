@@ -2,6 +2,10 @@
 
 use App\Http\Livewire\ClientIndex;
 use App\Http\Livewire\ClientSave;
+use App\Http\Livewire\EquipamentIndex;
+use App\Http\Livewire\EquipamentSave;
+use App\Http\Livewire\LoanIndex;
+use App\Http\Livewire\LoanSave;
 use App\Http\Livewire\PermissionCreateForm;
 use App\Http\Livewire\PermissionIndex;
 use App\Http\Livewire\PermissionSave;
@@ -31,7 +35,7 @@ Route::get('/', function () {
 // })->name('home');
 
 Route::middleware(['auth'])->group(function(){
-    Route::view('/home', 'home')->name('home');
+    Route::view('home', 'home')->name('home');
     Route::get('usuarios', UserIndex::class)->name('users.index');
     Route::get('usuarios/create', UserSave::class)->name('users.create');
     Route::get('usuarios/edit/{user}', UserSave::class)->name('users.edit');
@@ -44,5 +48,11 @@ Route::middleware(['auth'])->group(function(){
     Route::get('clientes', ClientIndex::class)->name('clients.index');
     Route::get('clientes/create', ClientSave::class)->name('clients.create');
     Route::get('clientes/edit/{client}', ClientSave::class)->name('clients.edit');
+    Route::get('equipamentos', EquipamentIndex::class)->name('equipaments.index');
+    Route::get('equipamentos/create', EquipamentSave::class)->name('equipaments.create');
+    Route::get('equipamentos/edit/{equipament}', EquipamentSave::class)->name('equipaments.edit');
+    Route::get('emprestimos', LoanIndex::class)->name('loans.index');
+    Route::get('emprestimos/create', LoanSave::class)->name('loans.create');
+    Route::get('emprestimos/edit/{loan}', LoanSave::class)->name('loans.edit');
 });
 

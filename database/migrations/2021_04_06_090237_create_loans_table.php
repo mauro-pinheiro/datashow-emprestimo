@@ -18,8 +18,11 @@ class CreateLoansTable extends Migration
             $table->foreignId('user_id');
             $table->foreignId('client_id');
             $table->foreignId('equipament_id');
-            $table->timestamp('due_date');
-            $table->timestamp('return_date')->nullable();
+            $table->timestamp('reservation_date');              //Date que o equipamento foi reservado
+            $table->timestamp('load_date')->nullable();         //Data de retirada do equipamento
+            $table->timestamp('due_date')->nullable();          //Data de que o equipamento deve ser devolvido
+            $table->timestamp('return_date')->nullable();       //Data que o equipamento foi devolvido
+            $table->string('status');
             $table->timestamps();
         });
     }

@@ -24,14 +24,14 @@ class Loan extends Model
     }
 
     public function client(){
-        return $this->belongTo(Client::class);
+        return $this->belongsTo(Client::class);
     }
 
     public function user(){
-        return $this->belongTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function equipament(){
-        return $this->belongTo(Equipament::class);
+        return $this->belongsTo(Equipament::class);
     }
 }
