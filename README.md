@@ -10,10 +10,12 @@ Sistema para auxiliar o CAE do IFMA no processo de emprestimo e devolução de d
 - Os professores e alunos serão cadastrados no sistema pelo CAE.
 - Os usuarios poderão visualizar/editar/cancelar as solicitações e reservas programadas.
 - Deve incorporar um recurso de envio de e-mails aos participantes:
-  - Lembrete de devolução de equipamentos;
+  - Lembrete de devolução de equipamentos (por e-mail);
 - Devem existir 3 níveis de usuários: funcionarios, chefe do setor e administrador
 - O sistema deve visualizar os emprestimos realizados com datas de devoluções virgentes e vencidas.
-- O sistema deve possibilitar alocar um equipamento a um professor cadastrado
+- O sistema deve possibilitar alocar um equipamento a um professor cadastrado.
+- Comprovante solicitação de reserva (por e-mail).
+- Emissão de relatório.
 
 # Roles e Permissions
 ### Funcionário
